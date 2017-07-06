@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
+import { withGoogleMap, GoogleMap } from 'react-google-maps';
 
-class GoogleMap extends Component {
-    componentDidMount() {
-        new google.maps.Map(this.refs.map, {
-            zoom: 12,
-            center: {
-                lat: this.props.lat,
-                lng: this.props.lon
-            }
-        });
-    }
+const GettingStartedGoogleMap = withGoogleMap(props => (
+    <GoogleMap
+        defaultZoom={12}
+        defaultCenter={props.center}
+    />
+));
 
-    render() {
-        return <div ref="map" />;
-    }
-
+export default (props) => {;
+    return (
+        <GettingStartedGoogleMap
+            containerElement={<div style={{ height: '100%', width: '100%' }} />}
+            mapElement={<div style={{ height: '100%', width: '100%' }} />}
+            center={{lat:props.lat, lng:props.lon }}
+        />
+    );
 }
-
-export default GoogleMap;
