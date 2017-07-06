@@ -1,0 +1,15 @@
+.table > tbody > tr > td,
+.table > thead > tr > th {
+    vertical-align: middle !important;
+    display: table-cell !important;
+    float: none;
+}
+
+.input-group {
+    margin: 20px 0px;
+}
+
+td:first-of-type > div {
+    height: 200px;
+    width: 250px;
+}
