@@ -8,12 +8,13 @@ const GettingStartedGoogleMap = withGoogleMap(props => (
     />
 ));
 
-export default (props) => {;
+export default (props) => {
+    const center = {lat:props.lat, lng:props.lon };
     return (
         <GettingStartedGoogleMap
-            containerElement={<div style={{ height: '100%', width: '100%' }} />}
-            mapElement={<div style={{ height: '100%', width: '100%' }} />}
-            center={{lat:props.lat, lng:props.lon }}
+            containerElement={<div style={{ height: '200px', width: '250px' }} />}
+            mapElement={<div style={{ height: '200px', width: '250px' }} />}
+            center={center}
         />
     );
 }
